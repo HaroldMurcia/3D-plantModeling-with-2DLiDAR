@@ -1,0 +1,21 @@
+<launch>
+<!-- inicializar las variable del mundo -->
+  <arg name="paused" default="true"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+
+  <include file= "$(find gazebo_ros)/launch/empty_world.launch">
+    <!-- selecciona la carpeta del proyecto y el launcher -->
+    <arg name="world_name" value="$(find plataforma)/world/plataforma.world"/>
+    <arg name="verbose" value="true"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="gui"  value="$(arg gui)"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time"  value="$(arg use_sim_time)"/>
+    <arg name="headless"  value="$/arg headless"/>
+  </include>
+
+
+</launch>

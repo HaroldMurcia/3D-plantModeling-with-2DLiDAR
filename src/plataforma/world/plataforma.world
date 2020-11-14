@@ -1,0 +1,416 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>40 766000000</sim_time>
+      <real_time>40 893410527</real_time>
+      <wall_time>1598550415 401509082</wall_time>
+      <iterations>40766</iterations>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>4.77733 -4.98879 1.9488 0 0.275643 2.35619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+    <model name='Plataforma'>
+
+      <pose>0 0 -0.078 1.57 -0 0</pose>
+
+
+      <link name='Chassis'>
+        <inertial>
+          <static>true</static>
+          <mass>10.42984</mass>
+          <pose frame=''>-0.010777 0.141328 0.086455 0 -0 0</pose>
+          <inertia>
+            <ixx>0</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0</iyy>
+            <iyz>0</iyz>
+            <izz>0</izz>
+          </inertia>
+        </inertial>
+        <collision name='Chassis_collision'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Chassis.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='Chassis_visual'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Chassis.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+
+
+        <gravity>1</gravity>
+      </link>
+      <link name='motor'>
+        <inertial>
+          <mass>0.001</mass>
+          <static>true</static>
+          <kinematic>0</kinematic>
+          <pose frame=''>-0.010741 0.104492 0.267655 0 -0 0</pose>
+          <inertia>
+            <ixx>0</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0</iyy>
+            <iyz>0</iyz>
+            <izz>0</izz>
+          </inertia>
+        </inertial>
+        <collision name='motor_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/motor.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='motor_visual'>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/motor.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+
+      <joint name='Chassis-motor' type='revolute'>
+        <parent>Chassis</parent>
+        <child>motor</child>
+        <pose frame=''>-0.013916 0.101928 0.300641 3.14159 1.57079 3.14159</pose>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <dynamics>
+            <damping>1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <limit>
+            <effort>1</effort>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <use_parent_model_frame>0</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='plataforma'>
+        <inertial>
+
+          <mass>0.169786</mass>
+          <pose frame=''>-0.059685 0.121254 0.281926 0 -0 0</pose>
+          <inertia>
+            <ixx>0.00028835</ixx>
+            <ixy>7e-08</ixy>
+            <ixz>6.29995e-13</ixz>
+            <iyy>1.64161e-11</iyy>
+            <iyz>1.54764e-09</iyz>
+            <izz>0.00028835</izz>
+          </inertia>
+        </inertial>
+        <collision name='plataforma_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Plataforma.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='plataforma_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Plataforma.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='motor-plataforma' type='revolute'>
+        <parent>motor</parent>
+        <child>plataforma</child>
+        <pose frame=''>-0.059938 0.141254 0.281631 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+
+
+        </axis>
+      </joint>
+      <link name='Camara'>
+        <gravity>1</gravity>
+
+        <pose frame=''>-0.033163 0.301481 -0.075752 0 -0 0</pose>
+        <must_be_base_link>0</must_be_base_link>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <inertial>
+          <mass>0.136053</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>0</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0</iyy>
+            <iyz>0</iyz>
+            <izz>0</izz>
+          </inertia>
+        </inertial>
+        <collision name='Camara_collision'>
+          <pose frame=''>0.033163 -0.301481 0.075752 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Camara.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='Camara_visual'>
+          <pose frame=''>0.033163 -0.301481 0.075752 0 -0 0</pose>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Camara.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <sensor name='CamaraCamera' type='camera'>
+          <visualize>1</visualize>
+          <always_on>1</always_on>
+          <pose frame=''>-0.010639 0.023484 0.024425 -3e-06 -1.57079 -1.57079</pose>
+          <camera name='Camaracamera'>
+            <horizontal_fov>1.5708</horizontal_fov>
+            <image>
+              <width>320</width>
+              <height>240</height>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+          </camera>
+          <plugin name='Camara_controller' filename='libgazebo_ros_camera.so'/>
+        </sensor>
+        <sensor name='Hokuyo' type='ray'>
+          <pose frame=''>-0.027 0 0 3.14159 -1.56841 3.14159</pose>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>726</samples>
+                <resolution>1</resolution>
+                <min_angle>-2.26889</min_angle>
+                <max_angle>2.2689</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>1</samples>
+                <min_angle>0</min_angle>
+                <max_angle>0</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.08</min>
+              <max>4</max>
+              <resolution>0.01</resolution>
+            </range>
+          </ray>
+          <plugin name='laser' filename='libmi_laser.so'/>
+          <always_on>1</always_on>
+          <update_rate>30</update_rate>
+          <visualize>1</visualize>
+        </sensor>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Chassis-Camara' type='prismatic'>
+        <parent>Chassis</parent>
+        <child>Camara</child>
+        <pose frame=''>-0.000842 0.023655 0.024596 0 -0 0</pose>
+        <axis>
+          <xyz>-0.999695 -0.01745 -0.01745</xyz>
+          <dynamics>
+            <damping>0</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <limit>
+            <upper>0</upper>
+            <lower>0</lower>
+            <effort>1</effort>
+          </limit>
+          <use_parent_model_frame>0</use_parent_model_frame>
+        </axis>
+      </joint>
+      <plugin name='RotacionPlataforma' filename='libplataforma.so'/>
+    </model>
+
+  </world>
+</sdf>

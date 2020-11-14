@@ -1,0 +1,2 @@
+plataforma
+-DCATKIN_DEVEL_PREFIX=/home/david/Plataforma_Reconstruccion_3D/devel -DCMAKE_INSTALL_PREFIX=/home/david/Plataforma_Reconstruccion_3D/install -G Unix Makefiles
