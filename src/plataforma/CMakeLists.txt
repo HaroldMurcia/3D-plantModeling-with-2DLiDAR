@@ -134,13 +134,16 @@ include_directories(
     ${GAZEBO_INCLUDE_DIRS}
 )
 
+
+# /home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/src/plataforma/plugin/rotacion_plataforma.cpp
+
 ## Declare a C++ library
 add_library(${PROJECT_NAME}
-  /home/david/Plataforma_Reconstruccion_3D/src/plataforma/plugin/rotacion_plataforma.cpp
+  ../../src/plataforma/plugin/rotacion_plataforma.cpp
 
  )
 add_library(mi_laser
-   /home/david/Plataforma_Reconstruccion_3D/src/plataforma/plugin/sensores/Laser.cpp
+   ../../src/plataforma/plugin/sensores/Laser.cpp
 )
 
 ## Add cmake target dependencies of the library

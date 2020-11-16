@@ -67,14 +67,14 @@ set(plataforma_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(plataforma_SOURCE_PREFIX /home/david/Plataforma_Reconstruccion_3D/src/plataforma)
-  set(plataforma_DEVEL_PREFIX /home/david/Plataforma_Reconstruccion_3D/devel)
+  set(plataforma_SOURCE_PREFIX /home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/src/plataforma)
+  set(plataforma_DEVEL_PREFIX /home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/devel)
   set(plataforma_INSTALL_PREFIX "")
   set(plataforma_PREFIX ${plataforma_DEVEL_PREFIX})
 else()
   set(plataforma_SOURCE_PREFIX "")
   set(plataforma_DEVEL_PREFIX "")
-  set(plataforma_INSTALL_PREFIX /home/david/Plataforma_Reconstruccion_3D/install)
+  set(plataforma_INSTALL_PREFIX /home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/install)
   set(plataforma_PREFIX ${plataforma_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/david/Plataforma_Reconstruccion_3D/install/lib;/home/david/Plataforma_Reconstruccion_3D/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/install/lib;/home/hmurcia/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

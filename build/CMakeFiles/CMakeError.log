@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/david/Plataforma_Reconstruccion_3D/build/CMakeFiles/CMakeTmp
+Change Dir: /home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_94395/fast"
-/usr/bin/make -f CMakeFiles/cmTC_94395.dir/build.make CMakeFiles/cmTC_94395.dir/build
-make[1]: se entra en el directorio '/home/david/Plataforma_Reconstruccion_3D/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_94395.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_94395.dir/CheckSymbolExists.c.o   -c /home/david/Plataforma_Reconstruccion_3D/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_94395
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94395.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_94395.dir/CheckSymbolExists.c.o  -o cmTC_94395 -rdynamic 
-CMakeFiles/cmTC_94395.dir/CheckSymbolExists.c.o: En la función `main':
-CheckSymbolExists.c:(.text+0x16): referencia a `pthread_create' sin definir
+Run Build Command:"/usr/bin/make" "cmTC_cab28/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cab28.dir/build.make CMakeFiles/cmTC_cab28.dir/build
+make[1]: Entering directory '/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cab28.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_cab28.dir/CheckSymbolExists.c.o   -c /home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_cab28
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cab28.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_cab28.dir/CheckSymbolExists.c.o  -o cmTC_cab28 
+CMakeFiles/cmTC_cab28.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_94395.dir/build.make:97: fallo en las instrucciones para el objetivo 'cmTC_94395'
-make[1]: *** [cmTC_94395] Error 1
-make[1]: se sale del directorio '/home/david/Plataforma_Reconstruccion_3D/build/CMakeFiles/CMakeTmp'
-Makefile:126: fallo en las instrucciones para el objetivo 'cmTC_94395/fast'
-make: *** [cmTC_94395/fast] Error 2
+CMakeFiles/cmTC_cab28.dir/build.make:97: recipe for target 'cmTC_cab28' failed
+make[1]: *** [cmTC_cab28] Error 1
+make[1]: Leaving directory '/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_cab28/fast' failed
+make: *** [cmTC_cab28/fast] Error 2
 
-File /home/david/Plataforma_Reconstruccion_3D/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/david/Plataforma_Reconstruccion_3D/build/CMakeFiles/CMakeTmp
+Change Dir: /home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_75f4e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_75f4e.dir/build.make CMakeFiles/cmTC_75f4e.dir/build
-make[1]: se entra en el directorio '/home/david/Plataforma_Reconstruccion_3D/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_75f4e.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_75f4e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_75f4e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75f4e.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_75f4e.dir/CheckFunctionExists.c.o  -o cmTC_75f4e -rdynamic -lpthreads 
-/usr/bin/ld: no se puede encontrar -lpthreads
+Run Build Command:"/usr/bin/make" "cmTC_a4b20/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a4b20.dir/build.make CMakeFiles/cmTC_a4b20.dir/build
+make[1]: Entering directory '/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4b20.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a4b20.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a4b20
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4b20.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a4b20.dir/CheckFunctionExists.c.o  -o cmTC_a4b20 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_75f4e.dir/build.make:97: fallo en las instrucciones para el objetivo 'cmTC_75f4e'
-make[1]: *** [cmTC_75f4e] Error 1
-make[1]: se sale del directorio '/home/david/Plataforma_Reconstruccion_3D/build/CMakeFiles/CMakeTmp'
-Makefile:126: fallo en las instrucciones para el objetivo 'cmTC_75f4e/fast'
-make: *** [cmTC_75f4e/fast] Error 2
+CMakeFiles/cmTC_a4b20.dir/build.make:97: recipe for target 'cmTC_a4b20' failed
+make[1]: *** [cmTC_a4b20] Error 1
+make[1]: Leaving directory '/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a4b20/fast' failed
+make: *** [cmTC_a4b20/fast] Error 2
 
 

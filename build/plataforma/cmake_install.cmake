@@ -1,8 +1,8 @@
-# Install script for directory: /home/david/Plataforma_Reconstruccion_3D/src/plataforma
+# Install script for directory: /home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/src/plataforma
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/david/Plataforma_Reconstruccion_3D/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,18 +32,23 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/david/Plataforma_Reconstruccion_3D/build/plataforma/catkin_generated/installspace/plataforma.pc")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/build/plataforma/catkin_generated/installspace/plataforma.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plataforma/cmake" TYPE FILE FILES
-    "/home/david/Plataforma_Reconstruccion_3D/build/plataforma/catkin_generated/installspace/plataformaConfig.cmake"
-    "/home/david/Plataforma_Reconstruccion_3D/build/plataforma/catkin_generated/installspace/plataformaConfig-version.cmake"
+    "/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/build/plataforma/catkin_generated/installspace/plataformaConfig.cmake"
+    "/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/build/plataforma/catkin_generated/installspace/plataformaConfig-version.cmake"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plataforma" TYPE FILE FILES "/home/david/Plataforma_Reconstruccion_3D/src/plataforma/package.xml")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plataforma" TYPE FILE FILES "/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/src/plataforma/package.xml")
 endif()
 

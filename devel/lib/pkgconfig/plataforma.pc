@@ -1,4 +1,4 @@
-prefix=/home/david/Plataforma_Reconstruccion_3D/devel
+prefix=/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/devel
 
 Name: plataforma
 Description: Description of plataforma

@@ -1,4 +1,4 @@
-prefix=/home/david/Plataforma_Reconstruccion_3D/install
+prefix=/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/install
 
 Name: plataforma
 Description: Description of plataforma
