@@ -1,8 +1,0 @@
-prefix=/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/devel
-
-Name: plataforma
-Description: Description of plataforma
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp gazebo_ros
