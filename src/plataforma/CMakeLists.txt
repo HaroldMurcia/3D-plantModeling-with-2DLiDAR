@@ -135,7 +135,6 @@ include_directories(
 )
 
 
-# /home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/src/plataforma/plugin/rotacion_plataforma.cpp
 
 ## Declare a C++ library
 add_library(${PROJECT_NAME}
