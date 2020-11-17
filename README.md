@@ -2,7 +2,7 @@
 A simulation tool for plant reconstructions based on a 2d laser sensor and a rotation disk.
 
 <p align='center'>
-    <img src="./images/doc/demo_01.gif" alt="drawing" width="800"/>
+    <img src="./images/doc/demo_01.gif" alt="drawing" width="400"/>
 </p>
 
 <p align='center'>
@@ -10,8 +10,6 @@ A simulation tool for plant reconstructions based on a 2d laser sensor and a rot
     <img src="./images/doc/Maiz_gazebo2.png" alt="drawing" width="200"/>
     <img src="./images/doc/Trigo_gazebo.png" alt="drawing" width="200"/>
     <img src="./images/doc/Maiz_R3Dcolor.png" alt="drawing" width="200"/>
-    <img src="./images/doc/Trigo_R3Dblanco.png" alt="drawing" width="200"/>
-    <img src="./images/doc/Trigo_R3Dcolor.png" alt="drawing" width="200"/>
 </p>
 
 ## Software requirements
