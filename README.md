@@ -3,6 +3,7 @@ A simulation tool for plant reconstructions based on a 2d laser sensor and a rot
 
 <p align='center'>
     <img src="./images/doc/demo_01.gif" alt="drawing" width="400"/>
+    <img src="./images/doc/maiz.gif" alt="drawing" width="400"/>
 </p>
 
 <p align='center'>
