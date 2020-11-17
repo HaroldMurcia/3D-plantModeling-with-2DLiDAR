@@ -43,7 +43,7 @@ namespace gazebo
       public: virtual void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf){
 
         if (_model->GetJointCount() == 0)  {
-          std::cerr << "Invalid joint count, Velodyne plugin not loaded\n";
+          std::cerr << "Invalid joint count, LiDAR plugin not loaded\n";
           return;
         }
 
@@ -80,11 +80,11 @@ namespace gazebo
         this->SetPosition(position);
         this->ms<<position;
 
-        gzdbg<<"Bienvenidos a la Plataforma de Recontruccion \r\n";
+        gzdbg<<"Welcome to the reconstruction platform \r\n";
     }
 
     static void desconexion(const ros::SingleSubscriberPublisher&){
-      ROS_INFO("Me desconecto");
+      ROS_INFO("Disconnect");
 
     }
 
@@ -103,7 +103,7 @@ namespace gazebo
 
     }
     static void conexion(const ros::SingleSubscriberPublisher&){
-      ROS_INFO("Me conecto");
+      ROS_INFO("Connecting...");
     }
     public: void OnRosMsg(const std_msgs::Float32ConstPtr &_msg){
       this->SetPosition(_msg->data);
