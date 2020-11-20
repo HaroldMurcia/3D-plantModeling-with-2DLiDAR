@@ -10,7 +10,7 @@ A simulation tool for plant reconstructions based on a 2d laser sensor and a rot
     <img src="./images/doc/Maiz_gazebo2.png" alt="drawing" width="200"/>
     <img src="./images/doc/Trigo_gazebo.png" alt="drawing" width="200"/>
     <img src="./images/doc/maiz.gif" alt="drawing" width="200"/>
-</p>
+</p> plantModeling
 
 ## Software requirements
 * [Ubuntu 16.04](https://releases.ubuntu.com/16.04/)

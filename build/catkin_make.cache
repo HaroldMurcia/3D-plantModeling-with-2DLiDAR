@@ -1,2 +1,0 @@
-plataforma
--DCATKIN_DEVEL_PREFIX=/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/devel -DCMAKE_INSTALL_PREFIX=/home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/install -G Unix Makefiles

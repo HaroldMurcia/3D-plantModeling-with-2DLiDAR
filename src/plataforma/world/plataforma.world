@@ -130,7 +130,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Chassis.STL</uri>
+              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/Chassis.STL</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -139,7 +139,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Chassis.STL</uri>
+              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/Chassis.STL</uri>
             </mesh>
           </geometry>
         </visual>
@@ -167,7 +167,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/motor.STL</uri>
+              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/motor.STL</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -192,7 +192,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/motor.STL</uri>
+              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/motor.STL</uri>
             </mesh>
           </geometry>
         </visual>
@@ -240,7 +240,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Plataforma.STL</uri>
+              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/Plataforma.STL</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -266,7 +266,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Plataforma.STL</uri>
+              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/Plataforma.STL</uri>
             </mesh>
           </geometry>
         </visual>
@@ -310,7 +310,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Camara.STL</uri>
+              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/Camara.STL</uri>
             </mesh>
           </geometry>
           <surface>
@@ -339,7 +339,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/david/Plataforma_Reconstruccion_3D/meshes/Camara.STL</uri>
+              <uri>file://meshes/Camara.STL</uri>
             </mesh>
           </geometry>
         </visual>

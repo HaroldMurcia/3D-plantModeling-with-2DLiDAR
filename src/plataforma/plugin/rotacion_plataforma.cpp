@@ -90,15 +90,15 @@ namespace gazebo
 
     public: void SetPosition(const double &_position){
     //  this->ms=std::stringstream();
-      this->ang_msg.data=this->joint->GetAngle(0).Radian();
-      while(this->joint->GetAngle(0).Radian()<(_position-0.0009)){
+      this->ang_msg.data=this->joint->Position(0);
+      while(this->joint->Position(0)<(_position-0.0009)){
 
           this->modelo->GetJointController()->SetPositionTarget(this->joint->GetScopedName(), _position);
-          gzdbg <<  joint->GetAngle(0).Radian()<< "   \r\n";
+          gzdbg <<  joint->Position(0)<< "   \r\n";
       }
       //this->ms=std::stringstream();
       //this->ms<<this->joint->GetAngle(0).Radian();
-      this->ang_msg.data=this->joint->GetAngle(0).Radian();
+      this->ang_msg.data=this->joint->Position(0);
       this->rosPub.publish(this->ang_msg);
 
     }
