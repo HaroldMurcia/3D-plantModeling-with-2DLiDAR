@@ -13,9 +13,9 @@ A simulation tool for plant reconstructions based on a 2d laser sensor and a rot
 </p> plantModeling
 
 ## Software requirements
-* [Ubuntu 16.04](https://releases.ubuntu.com/16.04/)
-* [ROS Kinetic](http://wiki.ros.org/kinetic)
-* [Gazebo 7](http://gazebosim.org/download)
+* [Ubuntu 18.04](https://releases.ubuntu.com/18.04/)
+* [ROS Melodic](http://wiki.ros.org/melodic)
+* [Gazebo 9](http://gazebosim.org/download)
 * Python libraries:
     * ```sudo apt-get install python-pip```
     * ```pip install numpy```
@@ -34,7 +34,10 @@ Compile with catkin:
 ```
 catkin_make
 ```
-
+Move "system" to Gazebo models:
+```
+cp -r meshes /home/<YOUR_USER_NAME>/.gazebo/models
+```
 
 ## How to run?
 
@@ -60,3 +63,12 @@ roslaunch plataforma plataforma.launcher
 cd 3D-plantModeling-with-2DLiDAR/src
 python Scaner3D_simulation.py <filename> <Max_Degree> <Delta_degree>
 ```
+### License
+If you use our system in an academic work, please cite:
+
+    @article{murcia2020,
+      title={Development of a Simulation Tool for 3D Plant Modeling based on 2D LiDAR Sensor},
+      author={Murcia, Harold, Sanabria, David, Méndez, Dehyro and Forero, Manuel.},
+      conference={Virtual Symposium in Plant Omics Sciences},
+      year={2020}
+     }

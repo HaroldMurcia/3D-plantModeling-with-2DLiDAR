@@ -1,4 +1,4 @@
-<sdf version='1.6'>
+ <sdf version='1.6'>
   <world name='default'>
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
@@ -110,13 +110,11 @@
     <model name='Plataforma'>
 
       <pose>0 0 -0.078 1.57 -0 0</pose>
-
-
       <link name='Chassis'>
         <inertial>
           <static>true</static>
           <mass>10.42984</mass>
-          <pose frame=''>-0.010777 0.141328 0.086455 0 -0 0</pose>
+          <pose frame=''>-0.010777 0.141328 0.086455 0 0 0</pose>
           <inertia>
             <ixx>0</ixx>
             <ixy>0</ixy>
@@ -129,8 +127,8 @@
         <collision name='Chassis_collision'>
           <geometry>
             <mesh>
+              <uri>model://meshes/Chassis.STL</uri>
               <scale>1 1 1</scale>
-              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/Chassis.STL</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -138,8 +136,8 @@
         <visual name='Chassis_visual'>
           <geometry>
             <mesh>
+              <uri>model://meshes/Chassis.STL</uri>
               <scale>1 1 1</scale>
-              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/Chassis.STL</uri>
             </mesh>
           </geometry>
         </visual>
@@ -167,7 +165,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/motor.STL</uri>
+              <uri>model://meshes/motor.STL</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -192,7 +190,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/motor.STL</uri>
+              <uri>model://meshes/motor.STL</uri>
             </mesh>
           </geometry>
         </visual>
@@ -236,11 +234,11 @@
           </inertia>
         </inertial>
         <collision name='plataforma_collision'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>-0.05 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/Plataforma.STL</uri>
+              <uri>model://meshes/maiz.STL</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -258,7 +256,7 @@
           </surface>
         </collision>
         <visual name='plataforma_visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>-0.005 0 0 0 0 0</pose>
           <material>
             <ambient>1 0 0 1</ambient>
             <diffuse>1 0 0 1</diffuse>
@@ -266,7 +264,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/Plataforma.STL</uri>
+              <uri>model://meshes/maiz.STL</uri>
             </mesh>
           </geometry>
         </visual>
@@ -310,7 +308,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file:///home/hmurcia/repos/3D-plantModeling-with-2DLiDAR/meshes/Camara.STL</uri>
+              <uri>model://meshes/Camara.STL</uri>
             </mesh>
           </geometry>
           <surface>
@@ -339,7 +337,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>file://meshes/Camara.STL</uri>
+              <uri>model://meshes/Camara.STL</uri>
             </mesh>
           </geometry>
         </visual>
